@@ -1,5 +1,7 @@
 import { getClient } from 'src/client';
+import * as bpclient from "@botpress/client";
 import type { RegisterFunction } from '../misc/types'
+
 
 export const register: RegisterFunction = async ({ ctx, client, logger }) => {
   try {
@@ -13,8 +15,10 @@ export const register: RegisterFunction = async ({ ctx, client, logger }) => {
     // Optionally, you can log the count of buckets or other details
     logger.forBot().info(`Found ${result} buckets in the account.`);
   } catch (error) {
-    // If there's an error in the command, it will come here
     logger.forBot().error("Failed to access AWS S3: Check configuration", error);
-    return; // Stop the registration process if access fails
+
+    throw new bpclient.RuntimeError(
+      "Configuration Error! Unknown error."
+    );
   }
 }
