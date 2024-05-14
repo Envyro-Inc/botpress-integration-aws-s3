@@ -1,0 +1,30 @@
+{
+  "name": "aws_s3",
+  "integrationName": "aws-s3",
+  "scripts": {
+    "version": "bp --version",
+    "login": "bp login",
+    "dev": "bp dev",
+    "gen": "bp gen",
+    "deploy": "bp deploy",
+    "type:check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "private": true,
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.569.0",
+    "@aws-sdk/s3-request-presigner": "^3.574.0",
+    "@botpress/client": "0.16.0",
+    "@botpress/sdk": "0.8.6",
+    "axios": "^1.6.8",
+    "zod": "^3.23.7"
+  },
+  "devDependencies": {
+    "@botpress/cli": "^0.8.9",
+    "@types/node": "^18.19.33",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  }
+}
