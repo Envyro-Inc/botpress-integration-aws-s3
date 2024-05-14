@@ -154,7 +154,7 @@ export const deleteObjectsOutputSchema = z.object({
 
 // Input and Output Schemas for listBuckets
 export const listBucketsInputSchema = z.object({
-    //accessKeyId: z.string().optional().describe('This is a placeholder value. The integration will use the account you have configured.')
+    accessKeyId: z.string().describe("Optional, you don't need to write anything here").optional()
 });
 
 export const listBucketsOutputSchema = z.object({
@@ -178,7 +178,6 @@ export const listBucketsOutputSchema = z.object({
       }),
     }),
 });
-
 
 // Input and Output Schemas for getObject
 export const getObjectInputSchema = z.object({

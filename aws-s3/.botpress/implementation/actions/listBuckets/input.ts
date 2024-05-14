@@ -5,4 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Input {}
+export interface Input {
+  /**
+   * Optional, you don't need to write anything here
+   */
+  accessKeyId?: string;
+}

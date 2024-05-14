@@ -1,13 +1,14 @@
 import { getClient } from '../client'
-import { listBucketsInputSchema, listBucketsOutputSchema } from '../misc/custom-schemas'
 import type { Implementation } from '../misc/types'
 
-export const listBuckets: Implementation['actions']['listBuckets'] = async ({ ctx, logger, input}) => {
+export const listBuckets: Implementation['actions']['listBuckets'] = async ({ ctx, logger }) => {
+  logger.forBot().debug("Test");
+
   const s3Client = getClient(ctx.configuration);
+  const result = await s3Client.listBuckets();
+
 
   try {
-    const result = await s3Client.listBuckets();
-
     logger.forBot().info(`Successful - List Buckets`);
     logger.forBot().debug(`Response -  ${JSON.stringify(result)}`);
 
