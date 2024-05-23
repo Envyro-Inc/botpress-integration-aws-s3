@@ -28,7 +28,7 @@ import {
 
 export default new IntegrationDefinition({
   name: integrationName ?? name,
-  version: '24.5.0',
+  version: '24.5.1',
   title: 'AWS S3',
   readme: 'hub.md',
   icon: 'icon.svg',

@@ -8,6 +8,10 @@ export const register: RegisterFunction = async ({ ctx, client, logger }) => {
     // Assuming there's an S3 client setup which can be imported and used to check access
     const s3Client = getClient(ctx.configuration);  // Ensure getClient is properly imported and setup
     const result = await s3Client.listBuckets();
+
+    if (result.success == false) {
+      throw new Error(result.message);
+    }
     
     // If the listBuckets command does not throw, it means we have successfully accessed S3
     logger.forBot().info("Successfully accessed AWS S3: Integration can proceed");
@@ -18,7 +22,7 @@ export const register: RegisterFunction = async ({ ctx, client, logger }) => {
     logger.forBot().error("Failed to access AWS S3: Check configuration", error);
 
     throw new bpclient.RuntimeError(
-      "Configuration Error! Unknown error."
+      `Configuration ${error}`
     );
   }
 }

@@ -20,7 +20,7 @@ export * as states from "./states/index"
 
 type TIntegration = {
   name: "aws-s3"
-  version: "24.5.0"
+  version: "24.5.1"
   configuration: configuration.Configuration
   actions: actions.Actions
   channels: channels.Channels
