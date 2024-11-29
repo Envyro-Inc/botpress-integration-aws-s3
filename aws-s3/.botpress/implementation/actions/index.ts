@@ -25,15 +25,15 @@ import * as listBuckets from "./listBuckets/index";
 export * as listBuckets from "./listBuckets/index";
 
 export type Actions = {
-  createBucket: createBucket.ActionCreateBucket;
-  deleteBucket: deleteBucket.ActionDeleteBucket;
-  copyObject: copyObject.ActionCopyObject;
-  deleteBucketPolicy: deleteBucketPolicy.ActionDeleteBucketPolicy;
-  deleteBucketWebsite: deleteBucketWebsite.ActionDeleteBucketWebsite;
-  deleteObject: deleteObject.ActionDeleteObject;
-  deleteObjects: deleteObjects.ActionDeleteObjects;
-  getObject: getObject.ActionGetObject;
-  listObjectsV2: listObjectsV2.ActionListObjectsV2;
-  putObject: putObject.ActionPutObject;
-  listBuckets: listBuckets.ActionListBuckets;
+  "createBucket": createBucket.CreateBucket;
+  "deleteBucket": deleteBucket.DeleteBucket;
+  "copyObject": copyObject.CopyObject;
+  "deleteBucketPolicy": deleteBucketPolicy.DeleteBucketPolicy;
+  "deleteBucketWebsite": deleteBucketWebsite.DeleteBucketWebsite;
+  "deleteObject": deleteObject.DeleteObject;
+  "deleteObjects": deleteObjects.DeleteObjects;
+  "getObject": getObject.GetObject;
+  "listObjectsV2": listObjectsV2.ListObjectsV2;
+  "putObject": putObject.PutObject;
+  "listBuckets": listBuckets.ListBuckets;
 }

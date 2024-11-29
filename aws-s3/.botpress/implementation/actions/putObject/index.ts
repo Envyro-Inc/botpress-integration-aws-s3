@@ -6,7 +6,7 @@ export * as input from "./input";
 import * as output from "./output";
 export * as output from "./output";
 
-export type ActionPutObject = {
-  input: input.Input;
-  output: output.Output;
+export type PutObject = {
+  "input": input.Input;
+  "output": output.Output;
 }

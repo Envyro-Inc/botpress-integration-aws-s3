@@ -6,7 +6,7 @@ export * as input from "./input";
 import * as output from "./output";
 export * as output from "./output";
 
-export type ActionDeleteObject = {
-  input: input.Input;
-  output: output.Output;
+export type DeleteObject = {
+  "input": input.Input;
+  "output": output.Output;
 }

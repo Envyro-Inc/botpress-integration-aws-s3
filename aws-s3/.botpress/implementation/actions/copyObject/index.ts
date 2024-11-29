@@ -6,7 +6,7 @@ export * as input from "./input";
 import * as output from "./output";
 export * as output from "./output";
 
-export type ActionCopyObject = {
-  input: input.Input;
-  output: output.Output;
+export type CopyObject = {
+  "input": input.Input;
+  "output": output.Output;
 }
