@@ -37,7 +37,7 @@ export default new IntegrationDefinition({
   configuration: {
     schema: z.object({
       accessKeyId: z.string(),                // AWS Access Key ID
-      secretAccessKey: z.string().hidden(),   // AWS Secret Access Key
+      secretAccessKey: z.string(),   // AWS Secret Access Key
       region: z.string()                      // AWS Region
     })
   },
